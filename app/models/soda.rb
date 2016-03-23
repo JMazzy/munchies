@@ -8,7 +8,6 @@ class Soda
   def search(latitude, longitude)
     @site += "?$where=within_circle(location, #{latitude}, #{longitude}, 1000)"
     @json = HTTParty.get(@site).parsed_response
-
     to_list
   end
 

@@ -1,0 +1,9 @@
+<% trucks.each do |list| %>
+  <tr>
+    <td><%= link_to "PDF Schedule", list[:schedule] %></td>
+    <td><%= list[:vendor] %></td>
+    <td><%= list[:food] %></td>
+    <td><%= list[:address] %></td>
+    <td><%= list[:hours] %></td>
+  </tr>
+<% end %>

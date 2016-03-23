@@ -1,0 +1,18 @@
+<div class="container-fluid" id="welcome">
+  <img src="images/street.jpg">
+  <div class="row text-center header">
+    <h1>Munchies</h1>
+    <h4>
+      Nearest Food Trucks | Experience the Bay
+    </h4>
+    <div class="col-sm-offset-4 col-sm-4">
+    <%= form_tag "/searches", class: "form-group" do %>
+      <p>
+        <%= text_field_tag :address, '', class: "form-control", placeholder: "Search by Address or Zip in the Bay Area" %> 
+        <%= submit_tag "Find Food Trucks", class: "btn btn-default" %>
+      </p>
+    <% end %>
+  </div>
+
+</div>
+

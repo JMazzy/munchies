@@ -1,0 +1,4 @@
+$list = $('#truck-list');
+$list.html('');
+
+$list.append($("<%= j(render partial: 'table', locals: {trucks: @trucks}) %>"))
