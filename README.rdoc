@@ -1,3 +1,0 @@
-Find the nearest Food Truck in SF!
-
-Type in the full address or zip
