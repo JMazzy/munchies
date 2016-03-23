@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="dropdown">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <%= form_tag "/search", class: 'navbar-form' do %>
+          <%= form_tag "/locations", class: 'navbar-form' do %>
             <%= text_field_tag :food_item, '', class: 'form-control', placeholder: 'Search Food' %>
             <%= text_field_tag :location, '', class: 'form-control', placeholder: 'zip' %>
             <%= submit_tag "search", class: "btn-default" %>
@@ -23,3 +23,39 @@
     </div>
   </div>
 </nav>
+
+<div class="container">
+
+  <div class="row">
+    <h2>Nearby Trucks</h2>
+  </div>
+
+  <% if @trucks %>
+    <table class="table">
+
+      <thead>
+        <tr>
+          <th>PDF Schedule</th>
+          <th>Vendor</th>
+          <th>Food</th>
+          <th>Address</th>
+          <th>Hours</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @trucks.each do |list| %>
+          <tr>
+            <td><%= link_to "PDF Schedule", list[:schedule] %></td>
+            <td><%= list[:vendor] %></td>
+            <td><%= list[:food] %></td>
+            <td><%= list[:address] %></td>
+            <td><%= list[:hours] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+
+
+</div>
